@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A1831FA892FB2D85B53083B /* Pods_fiteasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */; };
 		A96CAA182845E0D8006114BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA172845E0D8006114BE /* AppDelegate.swift */; };
 		A96CAA1A2845E0D8006114BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA192845E0D8006114BE /* SceneDelegate.swift */; };
-		A96CAA1C2845E0D8006114BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA1B2845E0D8006114BE /* ViewController.swift */; };
 		A96CAA1F2845E0D8006114BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA1D2845E0D8006114BE /* Main.storyboard */; };
 		A96CAA212845E0D9006114BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA202845E0D9006114BE /* Assets.xcassets */; };
 		A96CAA242845E0D9006114BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA222845E0D9006114BE /* LaunchScreen.storyboard */; };
 		A96CAA2F2845E0DA006114BE /* fiteasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA2E2845E0DA006114BE /* fiteasyTests.swift */; };
 		A96CAA392845E0DA006114BE /* fiteasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA382845E0DA006114BE /* fiteasyUITests.swift */; };
 		A96CAA3B2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA3A2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift */; };
+		A96CAA4B284606BE006114BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4A284606BE006114BE /* LoginViewController.swift */; };
+		A96CAA4D28460766006114BE /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4C28460766006114BE /* startViewController.swift */; };
+		A96CAA4F28460791006114BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4E28460791006114BE /* RegisterViewController.swift */; };
+		A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA50284635FB006114BE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fiteasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A73840ED183E942EC519B0 /* Pods-fiteasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.release.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.release.xcconfig"; sourceTree = "<group>"; };
+		89C2E22EA1A41D083019EB2D /* Pods-fiteasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.debug.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.debug.xcconfig"; sourceTree = "<group>"; };
 		A96CAA142845E0D8006114BE /* fiteasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fiteasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96CAA172845E0D8006114BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96CAA192845E0D8006114BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A96CAA1B2845E0D8006114BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A96CAA1E2845E0D8006114BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A96CAA202845E0D9006114BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A96CAA232845E0D9006114BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,10 @@
 		A96CAA342845E0DA006114BE /* fiteasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fiteasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96CAA382845E0DA006114BE /* fiteasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiteasyUITests.swift; sourceTree = "<group>"; };
 		A96CAA3A2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiteasyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A96CAA4A284606BE006114BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A96CAA4C28460766006114BE /* startViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
+		A96CAA4E28460791006114BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A96CAA50284635FB006114BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A1831FA892FB2D85B53083B /* Pods_fiteasy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4AEB5306F34427BB5C331CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A96CAA0B2845E0D8006114BE = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +102,8 @@
 				A96CAA2D2845E0DA006114BE /* fiteasyTests */,
 				A96CAA372845E0DA006114BE /* fiteasyUITests */,
 				A96CAA152845E0D8006114BE /* Products */,
+				C83D280221C11DFA8DA20787 /* Pods */,
+				4AEB5306F34427BB5C331CA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +120,15 @@
 		A96CAA162845E0D8006114BE /* fiteasy */ = {
 			isa = PBXGroup;
 			children = (
+				A96CAA492845E126006114BE /* Controller */,
+				A96CAA482845E110006114BE /* View */,
+				A96CAA472845E0F9006114BE /* Model */,
 				A96CAA172845E0D8006114BE /* AppDelegate.swift */,
 				A96CAA192845E0D8006114BE /* SceneDelegate.swift */,
-				A96CAA1B2845E0D8006114BE /* ViewController.swift */,
-				A96CAA1D2845E0D8006114BE /* Main.storyboard */,
 				A96CAA202845E0D9006114BE /* Assets.xcassets */,
 				A96CAA222845E0D9006114BE /* LaunchScreen.storyboard */,
 				A96CAA252845E0D9006114BE /* Info.plist */,
+				A96CAA50284635FB006114BE /* GoogleService-Info.plist */,
 			);
 			path = fiteasy;
 			sourceTree = "<group>";
@@ -127,6 +150,40 @@
 			path = fiteasyUITests;
 			sourceTree = "<group>";
 		};
+		A96CAA472845E0F9006114BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A96CAA482845E110006114BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A96CAA1D2845E0D8006114BE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A96CAA492845E126006114BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A96CAA4A284606BE006114BE /* LoginViewController.swift */,
+				A96CAA4C28460766006114BE /* startViewController.swift */,
+				A96CAA4E28460791006114BE /* RegisterViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C83D280221C11DFA8DA20787 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89C2E22EA1A41D083019EB2D /* Pods-fiteasy.debug.xcconfig */,
+				83A73840ED183E942EC519B0 /* Pods-fiteasy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A96CAA3E2845E0DA006114BE /* Build configuration list for PBXNativeTarget "fiteasy" */;
 			buildPhases = (
+				FB47B6A8FD746F49129B7EB2 /* [CP] Check Pods Manifest.lock */,
 				A96CAA102845E0D8006114BE /* Sources */,
 				A96CAA112845E0D8006114BE /* Frameworks */,
 				A96CAA122845E0D8006114BE /* Resources */,
+				A9D2A965FB2814A0BDA34107 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96CAA242845E0D9006114BE /* LaunchScreen.storyboard in Resources */,
+				A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */,
 				A96CAA212845E0D9006114BE /* Assets.xcassets in Resources */,
 				A96CAA1F2845E0D8006114BE /* Main.storyboard in Resources */,
 			);
@@ -253,12 +313,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A9D2A965FB2814A0BDA34107 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fiteasy/Pods-fiteasy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fiteasy/Pods-fiteasy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fiteasy/Pods-fiteasy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB47B6A8FD746F49129B7EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fiteasy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A96CAA102845E0D8006114BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96CAA1C2845E0D8006114BE /* ViewController.swift in Sources */,
+				A96CAA4B284606BE006114BE /* LoginViewController.swift in Sources */,
+				A96CAA4F28460791006114BE /* RegisterViewController.swift in Sources */,
+				A96CAA4D28460766006114BE /* startViewController.swift in Sources */,
 				A96CAA182845E0D8006114BE /* AppDelegate.swift in Sources */,
 				A96CAA1A2845E0D8006114BE /* SceneDelegate.swift in Sources */,
 			);
@@ -432,6 +536,7 @@
 		};
 		A96CAA3F2845E0DA006114BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89C2E22EA1A41D083019EB2D /* Pods-fiteasy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +565,7 @@
 		};
 		A96CAA402845E0DA006114BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A73840ED183E942EC519B0 /* Pods-fiteasy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
