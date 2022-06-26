@@ -22,7 +22,6 @@ class myPlanViewController: UITableViewController
         tableView.dataSource = self
         title = "Work Plan"
         navigationItem.hidesBackButton = true
-        openMongoDBRealm()
 
         
      //   tableView.register(UINib(nibName: K.welcomeCellNibName, bundle: nil), forCellReuseIdentifier: K.welcomeCellIdentifier)
@@ -55,11 +54,11 @@ class myPlanViewController: UITableViewController
         self.performSegue(withIdentifier: K.PlanToMain, sender: self)
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
         
         if segue.identifier == K.PlanToMain{
                     let trainingVC = segue.destination as! mainMenuViewController
-                  checkData()
+            openMongoDBRealm()
             trainingVC.trainerData = self.trainerData
                 }
     }
@@ -79,41 +78,6 @@ class myPlanViewController: UITableViewController
         }
     
     
-    
-    func checkData(){
-        if(flag[0]==1){
-            trainerData.TrainPlan?.exercises[0].weight="3"
-            trainerData.TrainPlan?.exercises[0].reps="3"
-            trainerData.TrainPlan?.exercises[0].sets="3"
-        }
-        if(flag[1]==1){
-            
-            trainerData.TrainPlan?.exercises[1].weight="3"
-            trainerData.TrainPlan?.exercises[1].reps="3"
-            trainerData.TrainPlan?.exercises[1].sets="3"
-        }
-        if(flag[2]==1){
-            trainerData.TrainPlan?.exercises[2].weight="3"
-            trainerData.TrainPlan?.exercises[2].reps="3"
-            trainerData.TrainPlan?.exercises[2].sets="3"
-        }
-        if(flag[3]==1){
-            trainerData.TrainPlan?.exercises[3].weight="3"
-            trainerData.TrainPlan?.exercises[3].reps="3"
-            trainerData.TrainPlan?.exercises[3].sets="3"
-        }
-        if(flag[4]==1){
-            trainerData.TrainPlan?.exercises[4].weight="3"
-            trainerData.TrainPlan?.exercises[4].reps="3"
-            trainerData.TrainPlan?.exercises[4].sets="3"
-        }
-        if(flag[5]==1){
-            
-            trainerData.TrainPlan?.exercises[5].weight="3"
-            trainerData.TrainPlan?.exercises[5].reps="3"
-            trainerData.TrainPlan?.exercises[5].sets="3"
-        }
-    }
         func openMongoDBRealm() {
 
             let app = App(id: "fiteasy-tjatq")
@@ -150,6 +114,45 @@ class myPlanViewController: UITableViewController
         }
             
             func onRealmOpened(_ realm: Realm){
+                let trainers=realm.objects(Trainer.self)// get user data
+                let t = trainers.where {
+                    $0.userEmail == Auth.auth().currentUser?.email
+                }
+                try! realm.write{
+                    if(flag[0]==1){
+                        t.first?.TrainPlan?.exercises[0].weight="3"
+                        t.first?.TrainPlan?.exercises[0].reps="3"
+                        t.first?.TrainPlan?.exercises[0].sets="3"
+                    }
+                    if(flag[1]==1){
+                        t.first?.TrainPlan?.exercises[1].weight="3"
+                        t.first?.TrainPlan?.exercises[1].reps="3"
+                        t.first?.TrainPlan?.exercises[1].sets="3"
+                    }
+                    if(flag[2]==1){
+                        t.first?.TrainPlan?.exercises[2].weight="3"
+                        t.first?.TrainPlan?.exercises[2].reps="3"
+                        t.first?.TrainPlan?.exercises[2].sets="3"
+                    }
+                    if(flag[3]==1){
+                        t.first?.TrainPlan?.exercises[3].weight="3"
+                        t.first?.TrainPlan?.exercises[3].reps="3"
+                        t.first?.TrainPlan?.exercises[3].sets="3"
+                    }
+                    if(flag[4]==1){
+                        t.first?.TrainPlan?.exercises[4].weight="3"
+                        t.first?.TrainPlan?.exercises[4].reps="3"
+                        t.first?.TrainPlan?.exercises[4].sets="3"
+                    }
+                    if(flag[5]==1){
+                        
+                        t.first?.TrainPlan?.exercises[5].weight="3"
+                        t.first?.TrainPlan?.exercises[5].reps="3"
+                        t.first?.TrainPlan?.exercises[5].sets="3"
+                    }
+                    realm.add(t, update: .modified)
+                }
+                print(t)
             }
 
         
