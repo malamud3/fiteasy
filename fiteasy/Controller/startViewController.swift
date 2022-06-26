@@ -9,12 +9,21 @@ import UIKit
 
 class startViewController: UIViewController {
 
+    
     @IBOutlet weak var TitleView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+
 
     /*
     // MARK: - Navigation

@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		3A1831FA892FB2D85B53083B /* Pods_fiteasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */; };
+		A9266CF3284787BC0015F0A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266CF2284787BC0015F0A1 /* Utilities.swift */; };
+		A9266D102847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */; };
+		A9266D152847B9A60015F0A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D142847B9A60015F0A1 /* Constants.swift */; };
+		A9266D172847BB080015F0A1 /* myPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D162847BB080015F0A1 /* myPlanViewController.swift */; };
+		A92A31F62855DEC7007565B1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A31F42855DEC7007565B1 /* MessageCell.swift */; };
+		A92A31F72855DEC7007565B1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92A31F52855DEC7007565B1 /* MessageCell.xib */; };
+		A92A31FF2857269C007565B1 /* welcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A31FD2857269C007565B1 /* welcomeCell.swift */; };
+		A92A3202285751EC007565B1 /* Trainer_TrainPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */; };
+		A92A3204285754F4007565B1 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A3203285754F4007565B1 /* Trainer.swift */; };
+		A95891B02865C07E00AB3F13 /* mainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95891AF2865C07E00AB3F13 /* mainMenuViewController.swift */; };
+		A96104C42868C8A50093DBDC /* trainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96104C32868C8A50093DBDC /* trainViewController.swift */; };
+		A9671488285B311000F525CF /* NIO in Frameworks */ = {isa = PBXBuildFile; productRef = A9671487285B311000F525CF /* NIO */; };
+		A967148A285B760000F525CF /* newUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9671489285B760000F525CF /* newUserViewController.swift */; };
 		A96CAA182845E0D8006114BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA172845E0D8006114BE /* AppDelegate.swift */; };
 		A96CAA1A2845E0D8006114BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA192845E0D8006114BE /* SceneDelegate.swift */; };
 		A96CAA1F2845E0D8006114BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA1D2845E0D8006114BE /* Main.storyboard */; };
@@ -16,9 +29,9 @@
 		A96CAA2F2845E0DA006114BE /* fiteasyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA2E2845E0DA006114BE /* fiteasyTests.swift */; };
 		A96CAA392845E0DA006114BE /* fiteasyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA382845E0DA006114BE /* fiteasyUITests.swift */; };
 		A96CAA3B2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA3A2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift */; };
-		A96CAA4B284606BE006114BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4A284606BE006114BE /* LoginViewController.swift */; };
+		A96CAA4B284606BE006114BE /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4A284606BE006114BE /* loginViewController.swift */; };
 		A96CAA4D28460766006114BE /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4C28460766006114BE /* startViewController.swift */; };
-		A96CAA4F28460791006114BE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4E28460791006114BE /* RegisterViewController.swift */; };
+		A96CAA4F28460791006114BE /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4E28460791006114BE /* registerViewController.swift */; };
 		A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA50284635FB006114BE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +56,18 @@
 		4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fiteasy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A73840ED183E942EC519B0 /* Pods-fiteasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.release.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.release.xcconfig"; sourceTree = "<group>"; };
 		89C2E22EA1A41D083019EB2D /* Pods-fiteasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.debug.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.debug.xcconfig"; sourceTree = "<group>"; };
+		A9266CF2284787BC0015F0A1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer_TrainPlan_exercises.swift; sourceTree = "<group>"; };
+		A9266D142847B9A60015F0A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A9266D162847BB080015F0A1 /* myPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPlanViewController.swift; sourceTree = "<group>"; };
+		A92A31F42855DEC7007565B1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		A92A31F52855DEC7007565B1 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		A92A31FD2857269C007565B1 /* welcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCell.swift; sourceTree = "<group>"; };
+		A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer_TrainPlan.swift; sourceTree = "<group>"; };
+		A92A3203285754F4007565B1 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		A95891AF2865C07E00AB3F13 /* mainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainMenuViewController.swift; sourceTree = "<group>"; };
+		A96104C32868C8A50093DBDC /* trainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trainViewController.swift; sourceTree = "<group>"; };
+		A9671489285B760000F525CF /* newUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newUserViewController.swift; sourceTree = "<group>"; };
 		A96CAA142845E0D8006114BE /* fiteasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fiteasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96CAA172845E0D8006114BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A96CAA192845E0D8006114BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,9 +80,9 @@
 		A96CAA342845E0DA006114BE /* fiteasyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fiteasyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A96CAA382845E0DA006114BE /* fiteasyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiteasyUITests.swift; sourceTree = "<group>"; };
 		A96CAA3A2845E0DA006114BE /* fiteasyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fiteasyUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A96CAA4A284606BE006114BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A96CAA4A284606BE006114BE /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		A96CAA4C28460766006114BE /* startViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
-		A96CAA4E28460791006114BE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A96CAA4E28460791006114BE /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		A96CAA50284635FB006114BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1831FA892FB2D85B53083B /* Pods_fiteasy.framework in Frameworks */,
+				A9671488285B311000F525CF /* NIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +121,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A9266CF1284787510015F0A1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A9266CF2284787BC0015F0A1 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A9266D112847B86F0015F0A1 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				A9266D142847B9A60015F0A1 /* Constants.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
 		A96CAA0B2845E0D8006114BE = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +162,9 @@
 		A96CAA162845E0D8006114BE /* fiteasy */ = {
 			isa = PBXGroup;
 			children = (
+				A9EAB8262860816E00229DDF /* DataModel */,
+				A9266D112847B86F0015F0A1 /* Strings */,
+				A9266CF1284787510015F0A1 /* Utilities */,
 				A96CAA492845E126006114BE /* Controller */,
 				A96CAA482845E110006114BE /* View */,
 				A96CAA472845E0F9006114BE /* Model */,
@@ -160,6 +205,7 @@
 		A96CAA482845E110006114BE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A92A31F52855DEC7007565B1 /* MessageCell.xib */,
 				A96CAA1D2845E0D8006114BE /* Main.storyboard */,
 			);
 			path = View;
@@ -168,11 +214,27 @@
 		A96CAA492845E126006114BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A96CAA4A284606BE006114BE /* LoginViewController.swift */,
+				A96CAA4A284606BE006114BE /* loginViewController.swift */,
 				A96CAA4C28460766006114BE /* startViewController.swift */,
-				A96CAA4E28460791006114BE /* RegisterViewController.swift */,
+				A96CAA4E28460791006114BE /* registerViewController.swift */,
+				A9266D162847BB080015F0A1 /* myPlanViewController.swift */,
+				A92A31F42855DEC7007565B1 /* MessageCell.swift */,
+				A92A31FD2857269C007565B1 /* welcomeCell.swift */,
+				A9671489285B760000F525CF /* newUserViewController.swift */,
+				A95891AF2865C07E00AB3F13 /* mainMenuViewController.swift */,
+				A96104C32868C8A50093DBDC /* trainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A9EAB8262860816E00229DDF /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A92A3203285754F4007565B1 /* Trainer.swift */,
+				A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */,
+				A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		C83D280221C11DFA8DA20787 /* Pods */ = {
@@ -202,6 +264,9 @@
 			dependencies = (
 			);
 			name = fiteasy;
+			packageProductDependencies = (
+				A9671487285B311000F525CF /* NIO */,
+			);
 			productName = fiteasy;
 			productReference = A96CAA142845E0D8006114BE /* fiteasy.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +339,9 @@
 				Base,
 			);
 			mainGroup = A96CAA0B2845E0D8006114BE;
+			packageReferences = (
+				A9671486285B311000F525CF /* XCRemoteSwiftPackageReference "swift-nio" */,
+			);
 			productRefGroup = A96CAA152845E0D8006114BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -290,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92A31F72855DEC7007565B1 /* MessageCell.xib in Resources */,
 				A96CAA242845E0D9006114BE /* LaunchScreen.storyboard in Resources */,
 				A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */,
 				A96CAA212845E0D9006114BE /* Assets.xcassets in Resources */,
@@ -360,11 +429,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A96CAA4B284606BE006114BE /* LoginViewController.swift in Sources */,
-				A96CAA4F28460791006114BE /* RegisterViewController.swift in Sources */,
+				A92A3204285754F4007565B1 /* Trainer.swift in Sources */,
+				A96104C42868C8A50093DBDC /* trainViewController.swift in Sources */,
+				A9266CF3284787BC0015F0A1 /* Utilities.swift in Sources */,
+				A96CAA4B284606BE006114BE /* loginViewController.swift in Sources */,
+				A96CAA4F28460791006114BE /* registerViewController.swift in Sources */,
+				A92A3202285751EC007565B1 /* Trainer_TrainPlan.swift in Sources */,
 				A96CAA4D28460766006114BE /* startViewController.swift in Sources */,
+				A95891B02865C07E00AB3F13 /* mainMenuViewController.swift in Sources */,
+				A967148A285B760000F525CF /* newUserViewController.swift in Sources */,
+				A9266D102847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift in Sources */,
 				A96CAA182845E0D8006114BE /* AppDelegate.swift in Sources */,
+				A9266D172847BB080015F0A1 /* myPlanViewController.swift in Sources */,
+				A92A31FF2857269C007565B1 /* welcomeCell.swift in Sources */,
 				A96CAA1A2845E0D8006114BE /* SceneDelegate.swift in Sources */,
+				A9266D152847B9A60015F0A1 /* Constants.swift in Sources */,
+				A92A31F62855DEC7007565B1 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +639,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -588,7 +668,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -708,6 +788,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9671486285B311000F525CF /* XCRemoteSwiftPackageReference "swift-nio" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-nio.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9671487285B311000F525CF /* NIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9671486285B311000F525CF /* XCRemoteSwiftPackageReference "swift-nio" */;
+			productName = NIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A96CAA0C2845E0D8006114BE /* Project object */;
 }
