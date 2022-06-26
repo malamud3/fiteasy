@@ -64,7 +64,7 @@
                                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="GxW-FQ-Pc1" kind="show" identifier="" id="gC4-Uw-vIb"/>
+                                                    <segue destination="GxW-FQ-Pc1" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="gC4-Uw-vIb"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9pO-h1-utv">
@@ -79,7 +79,7 @@
                                                     <color key="baseForegroundColor" name="AccentColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="33f-Ks-1oL" kind="show" id="qR9-fx-KFk"/>
+                                                    <segue destination="33f-Ks-1oL" kind="presentation" modalPresentationStyle="fullScreen" id="qR9-fx-KFk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -121,7 +121,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="App Plan Presentatio-4" translatesAutoresizingMaskIntoConstraints="NO" id="hGK-b0-nkH">
-                                <rect key="frame" x="0.0" y="88" width="414" height="776"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="820"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ika-sC-FUb">
                                 <rect key="frame" x="-7" y="287" width="428" height="322.5"/>
@@ -196,7 +196,7 @@
                                                 <connections>
                                                     <action selector="LoginbtnPressed:" destination="33f-Ks-1oL" eventType="touchUpInside" id="WIL-BQ-Jip"/>
                                                     <action selector="registerPressed:" destination="GxW-FQ-Pc1" eventType="touchUpInside" id="hV8-Ax-seH"/>
-                                                    <segue destination="9uq-1e-oF1" kind="show" id="qJ8-Du-8hn"/>
+                                                    <segue destination="33f-Ks-1oL" kind="presentation" modalPresentationStyle="fullScreen" id="hcP-Fs-AX5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -274,7 +274,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" image="App Plan Presentatio-4" translatesAutoresizingMaskIntoConstraints="NO" id="rCC-VQ-mlP">
-                                <rect key="frame" x="0.0" y="88" width="414" height="744"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="788"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ppe-Mn-Fbp">
                                 <rect key="frame" x="-7" y="222" width="428" height="452"/>
@@ -412,8 +412,8 @@
                         <outlet property="emailTextField" destination="wCB-UA-Q0q" id="5Sj-YM-GEn"/>
                         <outlet property="errorLabel" destination="eei-On-5ZY" id="8ky-we-UZQ"/>
                         <outlet property="passwordTextField" destination="ar0-5f-40y" id="mVw-pB-axg"/>
-                        <segue destination="9uq-1e-oF1" kind="show" identifier="noPlanUser" id="X42-JA-Upd"/>
-                        <segue destination="Oex-Fx-tPV" kind="show" identifier="LoginToMain" id="kY1-rP-npC"/>
+                        <segue destination="9uq-1e-oF1" kind="presentation" identifier="noPlanUser" modalPresentationStyle="fullScreen" id="X42-JA-Upd"/>
+                        <segue destination="Oex-Fx-tPV" kind="presentation" identifier="LoginToMain" modalPresentationStyle="fullScreen" id="kY1-rP-npC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y4U-Cb-jBf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -429,7 +429,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OzT-xr-IfN">
-                                <rect key="frame" x="0.0" y="138" width="414" height="500"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="500"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="App Plan Presentatio-2" translatesAutoresizingMaskIntoConstraints="NO" id="1Fv-X9-4h5">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
@@ -495,7 +495,7 @@
             <objects>
                 <viewController id="Oex-Fx-tPV" customClass="mainMenuViewController" customModule="fiteasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o1Q-uJ-cGR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" image="background_2" translatesAutoresizingMaskIntoConstraints="NO" id="XfQ-Oi-m9Q">
@@ -503,10 +503,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="goal-2" translatesAutoresizingMaskIntoConstraints="NO" id="GTO-Ft-o3h">
-                                <rect key="frame" x="-43" y="171" width="500" height="500"/>
+                                <rect key="frame" x="-43" y="198" width="500" height="500"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zk4-Tz-OYP">
-                                <rect key="frame" x="20" y="723" width="374" height="79"/>
+                                <rect key="frame" x="20" y="743" width="374" height="79"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NW0-mg-7AD">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
@@ -555,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Dg-Vd-1fW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2489.8550724637685" y="-781.47321428571422"/>
+            <point key="canvasLocation" x="2270" y="-773"/>
         </scene>
         <!--Train View Controller-->
         <scene sceneID="Aka-iM-NlG">
@@ -636,7 +636,7 @@
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="filled" title="MY PLAN REDAY"/>
                             <connections>
-                                <segue destination="Oex-Fx-tPV" kind="presentation" id="aVy-wW-Og8"/>
+                                <action selector="PlanToMain:" destination="k0n-Yl-RZL" eventType="touchUpInside" id="3T6-WS-eFd"/>
                             </connections>
                         </button>
                         <connections>
@@ -651,6 +651,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Oex-Fx-tPV" kind="presentation" identifier="PlanToMain" modalPresentationStyle="fullScreen" id="KpN-yX-hUj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tP4-ub-Jrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -659,8 +662,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eUT-eZ-BZK"/>
-        <segue reference="aVy-wW-Og8"/>
-        <segue reference="qJ8-Du-8hn"/>
+        <segue reference="KpN-yX-hUj"/>
+        <segue reference="hcP-Fs-AX5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="App Plan Presentatio" width="500" height="500"/>

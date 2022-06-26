@@ -15,17 +15,9 @@ class newUserViewController: UIViewController {
     var trainerData = Trainer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let realm = try! Realm()
-        let trainers=realm.objects(Trainer.self)// get user data
-        let t = trainers.where {
-            $0.userEmail == trainerData.userEmail
-        }
-       print(t)
     }
-    
     @IBAction func MakeTrainingPlan(_ sender: Any) {
         self.performSegue(withIdentifier: K.firstPlan, sender: self)
-
     }
     
     // MARK: - Navigation

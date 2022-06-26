@@ -24,11 +24,11 @@ struct K{
     static let hasPlanUser = "LoginToMain"
     static let noPlanUser = "noPlanUser"
     static let firstPlan = "firstPlan"
-    static let goToMain = "goToMain"
     static let mainToTrain = "mainToTrain"
     static let mainToPlan = "mainToPlan"
+    static let PlanToMain = "PlanToMain"
 
-
+    
 
     
     

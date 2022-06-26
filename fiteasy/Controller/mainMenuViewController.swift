@@ -18,12 +18,12 @@ class mainMenuViewController: UIViewController {
     }
     
     @IBAction func StartTrain(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.goToMain, sender: self)
+        self.performSegue(withIdentifier: K.mainToTrain, sender: self)
 
     }
     
     @IBAction func EditPlan(_ sender: UIButton) {
-        self.performSegue(withIdentifier: K.goToMain, sender: self)
+        self.performSegue(withIdentifier: K.mainToPlan, sender: self)
 
     }
     
@@ -33,7 +33,7 @@ class mainMenuViewController: UIViewController {
                     let trainingVC = segue.destination as! trainViewController
             trainingVC.trainerData = self.trainerData
                 }
-        else if segue.identifier == K.goToMain{
+        else if segue.identifier == K.mainToPlan{
                     let trainPlanVC = segue.destination as! myPlanViewController
             trainPlanVC.trainerData = self.trainerData
                 }

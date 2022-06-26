@@ -18,9 +18,8 @@ class loginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     let urlExerciseData = K.FStore.urlExerciseData
-    let exercise : [Trainer_TrainPlan_exercises]? = []
     var dataExercise = Trainer_TrainPlan()
-    var trainerData=Trainer()
+    var trainerData = Trainer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,25 +115,24 @@ class loginViewController: UIViewController {
         
         func onRealmOpened(_ realm: Realm){
             let trainers=realm.objects(Trainer.self)// get user data
-      
-            if(trainers.isEmpty){
+            let t = trainers.where {
+                $0.userEmail == Auth.auth().currentUser?.email
+            }
+            if(t.isEmpty){
                 try! realm.write{
                     print("newUser")
                trainerData = Trainer(value: ["_id":Auth.auth().currentUser?.uid ?? "0", "userEmail":Auth.auth().currentUser?.email ?? "0" , "TrainPlan": self.dataExercise])
                     realm.add(trainerData)
                 }
             }else{
-                let t = trainers.where {
-                    $0.userEmail == Auth.auth().currentUser?.email
-                }
+                trainerData=t.first ?? Trainer(value: ["_id":Auth.auth().currentUser?.uid ?? "0", "userEmail":Auth.auth().currentUser?.email ?? "0" , "TrainPlan": self.dataExercise])
             }
+        }
 
 
 
 
-                                   
-    }
-   
+        
         
         func closeRealmSafely() {
             // invalidate all realms

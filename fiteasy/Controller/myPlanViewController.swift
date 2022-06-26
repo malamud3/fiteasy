@@ -15,20 +15,13 @@ class myPlanViewController: UITableViewController
 {
 
     var trainerData = Trainer()
-    
-    let realm = try! Realm()
-    
     override func viewDidLoad() {
-        let trainers=realm.objects(Trainer.self)// get user data
+        print("fewfewfwefew")
 
-        print("dsadasdsadsa                   \(trainers.count)")
-        print(trainers)
+        print(trainerData)
 
-        
         super.viewDidLoad()
-
-
-        
+ 
         tableView.dataSource = self
         title = "Work Plan"
         navigationItem.hidesBackButton = true
@@ -37,13 +30,8 @@ class myPlanViewController: UITableViewController
      //   tableView.register(UINib(nibName: K.welcomeCellNibName, bundle: nil), forCellReuseIdentifier: K.welcomeCellIdentifier)
         
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
-
         
     }
-
-    
-
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return trainerData.TrainPlan?.exercises.count ?? 0
@@ -63,21 +51,33 @@ class myPlanViewController: UITableViewController
         cell.configure()
         return cell
     }
-    
 
+    
+    @IBAction func PlanToMain(_ sender: Any) {
+        self.performSegue(withIdentifier: K.PlanToMain, sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == K.PlanToMain{
+                    let trainingVC = segue.destination as! mainMenuViewController
+            trainingVC.trainerData = self.trainerData
+                }
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+        let item = trainerData.TrainPlan?.exercises[indexPath.row]
+            
         if(tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark){
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
         }else{
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         }
         
-        
-        
         tableView.deselectRow(at: indexPath, animated: true)
-    }
+        
+        }
+    
     
     
 
