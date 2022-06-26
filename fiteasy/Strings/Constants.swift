@@ -18,7 +18,7 @@ struct K{
     static let cellNibName = "MessageCell"
   
     
-    static let registerSegue = "RegisterToChat"
+    static let registerSegue = "RegisterToLogin"
     static let loginSegue = "LoginToChat"
     static let myPlanSegue = "MainToMyPlan"
     static let hasPlanUser = "LoginToMain"
