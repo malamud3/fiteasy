@@ -115,6 +115,9 @@ class loginViewController: UIViewController {
         
         func onRealmOpened(_ realm: Realm){
             let trainers=realm.objects(Trainer.self)// get user data
+            try! realm.write{
+                realm.deleteAll()
+            }
             let t = trainers.where {
                 $0.userEmail == Auth.auth().currentUser?.email
             }

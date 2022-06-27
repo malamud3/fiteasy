@@ -15,6 +15,7 @@ class myPlanViewController: UITableViewController
 {
     let urlExerciseData = K.FStore.urlExerciseData
     var trainerData = Trainer()
+
     var flag:[Int]=[0,0,0,0,0,0]
     override func viewDidLoad() {
 
@@ -118,41 +119,42 @@ class myPlanViewController: UITableViewController
                 let t = trainers.where {
                     $0.userEmail == Auth.auth().currentUser?.email
                 }
+                
                 try! realm.write{
                     if(flag[0]==1){
-                        t.first?.TrainPlan?.exercises[0].weight="3"
-                        t.first?.TrainPlan?.exercises[0].reps="3"
-                        t.first?.TrainPlan?.exercises[0].sets="3"
+                        trainerData.TrainPlan?.exercises[0].weight="3"
+                        trainerData.TrainPlan?.exercises[0].reps="3"
+                        trainerData.TrainPlan?.exercises[0].sets="3"
                     }
                     if(flag[1]==1){
-                        t.first?.TrainPlan?.exercises[1].weight="3"
-                        t.first?.TrainPlan?.exercises[1].reps="3"
-                        t.first?.TrainPlan?.exercises[1].sets="3"
+                        trainerData.TrainPlan?.exercises[1].weight="3"
+                        trainerData.TrainPlan?.exercises[1].reps="3"
+                        trainerData.TrainPlan?.exercises[1].sets="3"
                     }
                     if(flag[2]==1){
-                        t.first?.TrainPlan?.exercises[2].weight="3"
-                        t.first?.TrainPlan?.exercises[2].reps="3"
-                        t.first?.TrainPlan?.exercises[2].sets="3"
+                        trainerData.TrainPlan?.exercises[2].weight="3"
+                        trainerData.TrainPlan?.exercises[2].reps="3"
+                        trainerData.TrainPlan?.exercises[2].sets="3"
                     }
                     if(flag[3]==1){
-                        t.first?.TrainPlan?.exercises[3].weight="3"
-                        t.first?.TrainPlan?.exercises[3].reps="3"
-                        t.first?.TrainPlan?.exercises[3].sets="3"
+                        trainerData.TrainPlan?.exercises[3].weight="3"
+                        trainerData.TrainPlan?.exercises[3].reps="3"
+                        trainerData.TrainPlan?.exercises[3].sets="3"
                     }
                     if(flag[4]==1){
-                        t.first?.TrainPlan?.exercises[4].weight="3"
-                        t.first?.TrainPlan?.exercises[4].reps="3"
-                        t.first?.TrainPlan?.exercises[4].sets="3"
+                        trainerData.TrainPlan?.exercises[4].weight="3"
+                        trainerData.TrainPlan?.exercises[4].reps="3"
+                        trainerData.TrainPlan?.exercises[4].sets="3"
                     }
                     if(flag[5]==1){
                         
-                        t.first?.TrainPlan?.exercises[5].weight="3"
-                        t.first?.TrainPlan?.exercises[5].reps="3"
-                        t.first?.TrainPlan?.exercises[5].sets="3"
+                        trainerData.TrainPlan?.exercises[5].weight="3"
+                        trainerData.TrainPlan?.exercises[5].reps="3"
+                        trainerData.TrainPlan?.exercises[5].sets="3"
                     }
-                    realm.add(t, update: .modified)
                 }
                 print(t)
+                print(trainerData)
             }
 
         
