@@ -11,8 +11,8 @@ import Foundation
 
 struct cellData {
  var   isChecked : Bool = false
- var   c_weightTextField: String?
- var   c_repsTextField: String?
- var   c_setsTextField: String?
- var   c_restTextField: Int?
+ var   c_weight: String?
+ var   c_reps: String?
+ var   c_sets: String?
+ var   c_rest: Int?
 }

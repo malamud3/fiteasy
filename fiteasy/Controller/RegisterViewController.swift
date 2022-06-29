@@ -55,14 +55,6 @@ class registerViewController: UIViewController {
                return "Please fill in all fields."
             }
             
-           // Check if the password is secure
-          //  let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-//            if Utilities.isPasswordValid(cleanedPassword) == false {
-//                // Password isn't secure enough
-//                return "6 characters,special character and a number."
-//        }
-
 
             return nil
     }
@@ -74,19 +66,6 @@ func showError(_ message:String) {
     errorLabel.alpha = 1
 }
     
-    
-    
-
-    // MARK: - Navigation
-
-//    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == K.registerSegue{
-//            let trainPlanVC = segue.destination as! loginViewController
-//            trainPlanVC.trainerData = self.trainerData
-//                }
-//    }
-  
 
 }
 extension UIImageView {

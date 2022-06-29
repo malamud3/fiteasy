@@ -174,7 +174,7 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="Y7a-ul-qOX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="139.5" height="101"/>
                                                                     </imageView>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="rest time in sec" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-eZ-50S">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="rest in sec" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-eZ-50S">
                                                                         <rect key="frame" x="20" y="22" width="95.5" height="28"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

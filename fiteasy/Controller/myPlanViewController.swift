@@ -16,38 +16,43 @@ class myPlanViewController: UITableViewController
 {
     let urlExerciseData = K.FStore.urlExerciseData
     var trainerData = Trainer()
+    
+    //local data to make the app faster
+    var tempData = cellData()
+    var cellsData = [cellData?]()
 
     // local data to make the app faster
-    var localData : [Bool,String,String,String,String] = []
     override func viewDidLoad() {
 
         super.viewDidLoad()
         tableView.dataSource = self
         title = "Work Plan"
         navigationItem.hidesBackButton = true
-        self.tableView.rowHeight = 203
-        
-     //   tableView.register(UINib(nibName: K.welcomeCellNibName, bundle: nil), forCellReuseIdentifier: K.welcomeCellIdentifier)
-        
+        self.tableView.rowHeight = 204
+                
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        cellsData = [cellData?](repeating: nil, count:  (trainerData.TrainPlan?.exercises.count) ?? 0  )
         return trainerData.TrainPlan?.exercises.count ?? 0
         
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = trainerData.TrainPlan?.exercises[indexPath.row]
-
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
         cell.e_name.text = item?.name
         cell.e_img.loadFrom(URLAddress: item?.imgUrl ?? "" )
         cell.e_repsTextField.text = item?.reps
         cell.e_weightTextField.text = item?.weight
         cell.e_setsTextField.text = item?.sets
-
+        if(cell.e_restTextField.text != ""){
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        }else{
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }
         return cell
     }
 
@@ -66,18 +71,30 @@ class myPlanViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let cell = tableView.cellForRow(at: indexPath) as! MessageCell
         
         if(tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark){
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
-            localData.
+            
+            if (cellsData.isEmpty == false) {
+                cellsData[indexPath.row]?.isChecked=false
+            }
         }else{
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-            flag[indexPath.row]=1
+            tempData.c_weight=cell.e_weightTextField.text ?? ""
+            tempData.c_reps=cell.e_repsTextField.text ?? ""
+            tempData.c_rest=Int(cell.e_restTextField.text ??  "0")
+            tempData.c_sets=cell.e_setsTextField.text ?? ""
+            tempData.isChecked=true
+            cellsData[indexPath.row]=tempData
         }
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
+
         }
+    
+
     
 
     
@@ -118,29 +135,40 @@ class myPlanViewController: UITableViewController
             }
         }
             
-    ta
+    
             func onRealmOpened(_ realm: Realm){
                 /*
                  If cell has checkmark
                  UPDATE data in realm
                  */
                 var i=0
-                
-                if((trainerData.TrainPlan?.exercises.isEmpty) != nil){
+                let trainers=realm.objects(Trainer.self)// get user data
+                let t = trainers.where {
+                    $0.userEmail == Auth.auth().currentUser?.email
+                }
+                if (cellsData.isEmpty == false){
                 try! realm.write{
-                    while (i<trainerData.TrainPlan?.exercises.count! ?? 1) {
-                        trainerData.TrainPlan?.exercises[i].weight = cell.e_weightTextField.text ?? "10"
-                        trainerData.TrainPlan?.exercises[i].reps = cell.e_repsTextField.text ?? "12"
-                            trainerData.TrainPlan?.exercises[i].sets = cell.e_setsTextField.text ?? "3"
-                            trainerData.TrainPlan?.exercises[i].restBetweenSets = Int(cell.e_restTextField.text ?? "60")
-                            
+                    for e in  t
+                    {
+                        if(cellsData[i]?.isChecked == true){
+                            e.TrainPlan?.exercises[i].weight = cellsData[i]?.c_weight ?? ""
+                            e.TrainPlan?.exercises[i].reps = cellsData[i]?.c_reps ?? ""
+                            e.TrainPlan?.exercises[i].sets = cellsData[i]?.c_sets  ?? ""
+                            e.TrainPlan?.exercises[i].restBetweenSets = cellsData[i]?.c_rest ?? nil
+                        }else{
+                            e.TrainPlan?.exercises[i].weight = ""
+                            e.TrainPlan?.exercises[i].reps =  ""
+                            e.TrainPlan?.exercises[i].sets = ""
+                            e.TrainPlan?.exercises[i].restBetweenSets =  nil
                         }
+                        i+=1
                     }
+                
                 }
                 print(trainerData)
             }
 
-        
+            }
     
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {

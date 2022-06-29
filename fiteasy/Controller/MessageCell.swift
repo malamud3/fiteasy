@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MessageCell: UITableViewCell {
+class MessageCell: UITableViewCell, UITextFieldDelegate {
 
 
     @IBOutlet weak var e_name: UILabel!
@@ -32,10 +32,19 @@ class MessageCell: UITableViewCell {
         main.layer.cornerCurve = CALayerCornerCurve.circular
         msgBubble.layer.cornerCurve = CALayerCornerCurve.circular
         msgBubble.layer.cornerRadius = 9.0
+        
+        e_weightTextField.delegate=self
+        e_repsTextField.delegate=self
+        e_setsTextField.delegate=self
+        e_restTextField.delegate=self
+
 
     }
     
-
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
