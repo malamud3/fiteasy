@@ -14,6 +14,7 @@ class registerViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    var trainerData = Trainer()
 
     
     override func viewDidLoad() {
@@ -37,7 +38,8 @@ class registerViewController: UIViewController {
                 if let e = error{
                     print(e)
                 } else{
-                    self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                    self.trainerData._id = Auth.auth().currentUser?.uid
+                    self.trainerData.userEmail = Auth.auth().currentUser?.email
                 }
 
         }
@@ -74,15 +76,17 @@ func showError(_ message:String) {
     
     
     
-    /*
+
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == K.registerSegue{
+//            let trainPlanVC = segue.destination as! loginViewController
+//            trainPlanVC.trainerData = self.trainerData
+//                }
+//    }
+  
 
 }
 extension UIImageView {

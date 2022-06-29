@@ -15,3 +15,4 @@ class Trainer: Object, ObjectKeyIdentifiable ,Codable{
     @Persisted var userEmail: String? 
 
 }
+

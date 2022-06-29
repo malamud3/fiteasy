@@ -10,14 +10,16 @@ import UIKit
 class MessageCell: UITableViewCell {
 
 
-    @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var meImgView: UIImageView!
+    @IBOutlet weak var e_name: UILabel!
+    @IBOutlet weak var e_img: UIImageView!
     @IBOutlet weak var msgBubble: UIView!
     
-    @IBOutlet weak var weightTextField: UITextField!
-    @IBOutlet weak var repsTextField: UITextField!
-    @IBOutlet weak var setsTextField: UITextField!
+    @IBOutlet weak var e_weightTextField: UITextField!
+    @IBOutlet weak var e_repsTextField: UITextField!
+    @IBOutlet weak var e_setsTextField: UITextField!
+    @IBOutlet weak var e_restTextField: UITextField!
     
+    @IBOutlet weak var e_type: UILabel!
     @IBOutlet weak var main: UIView!
     
     override func awakeFromNib() {
@@ -28,12 +30,12 @@ class MessageCell: UITableViewCell {
         main.layer.masksToBounds = true
         main.layer.cornerRadius = 9.0
         main.layer.cornerCurve = CALayerCornerCurve.circular
+        msgBubble.layer.cornerCurve = CALayerCornerCurve.circular
+        msgBubble.layer.cornerRadius = 9.0
+
     }
     
-    /// Set up the cell
-    func configure() {
-      
-    }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

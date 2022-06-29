@@ -25,7 +25,7 @@ class loginViewController: UIViewController {
         super.viewDidLoad()
         errorLabel.alpha = 0
         performRequest()
-        openMongoDBRealm()
+      
     }
 
     
@@ -43,8 +43,7 @@ class loginViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
-                self.performSegue(withIdentifier: K.noPlanUser, sender: self)
-
+                self.openMongoDBRealm()
             }
         }
     }
@@ -59,6 +58,10 @@ class loginViewController: UIViewController {
                      let trainPlanVC = segue.destination as! newUserViewController
              trainPlanVC.trainerData = self.trainerData
                  }
+         else if segue.identifier == K.hasPlanUser{
+             let trainPlanVC = segue.destination as! mainMenuViewController
+             trainPlanVC.trainerData = self.trainerData
+         }
      }
 
     
@@ -124,9 +127,13 @@ class loginViewController: UIViewController {
                     print("newUser")
                trainerData = Trainer(value: ["_id":Auth.auth().currentUser?.uid ?? "0", "userEmail":Auth.auth().currentUser?.email ?? "0" , "TrainPlan": self.dataExercise])
                     realm.add(trainerData)
+                    self.performSegue(withIdentifier: K.noPlanUser, sender: self)
+
                 }
             }else{
                 trainerData=t.first ?? Trainer(value: ["_id":Auth.auth().currentUser?.uid ?? "0", "userEmail":Auth.auth().currentUser?.email ?? "0" , "TrainPlan": self.dataExercise])
+                self.performSegue(withIdentifier: K.hasPlanUser, sender: self)
+
             }
         }
 

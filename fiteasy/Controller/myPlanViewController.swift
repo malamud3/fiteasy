@@ -10,20 +10,22 @@ import UIKit
 //import FirebaseFirestore
 import FirebaseAuth
 import RealmSwift
+import SwiftUI
 
 class myPlanViewController: UITableViewController
 {
     let urlExerciseData = K.FStore.urlExerciseData
     var trainerData = Trainer()
 
-    var flag:[Int]=[0,0,0,0,0,0]
+    // local data to make the app faster
+    var localData : [Bool,String,String,String,String] = []
     override func viewDidLoad() {
 
         super.viewDidLoad()
         tableView.dataSource = self
         title = "Work Plan"
         navigationItem.hidesBackButton = true
-
+        self.tableView.rowHeight = 203
         
      //   tableView.register(UINib(nibName: K.welcomeCellNibName, bundle: nil), forCellReuseIdentifier: K.welcomeCellIdentifier)
         
@@ -40,13 +42,12 @@ class myPlanViewController: UITableViewController
         let item = trainerData.TrainPlan?.exercises[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath) as! MessageCell
-        cell.label.text = item?.name
-        cell.meImgView.loadFrom(URLAddress: item?.imgUrl ?? "" )
-        cell.repsTextField.text = item?.reps
-        cell.weightTextField.text = item?.weight
-        cell.setsTextField.text = item?.sets
+        cell.e_name.text = item?.name
+        cell.e_img.loadFrom(URLAddress: item?.imgUrl ?? "" )
+        cell.e_repsTextField.text = item?.reps
+        cell.e_weightTextField.text = item?.weight
+        cell.e_setsTextField.text = item?.sets
 
-        cell.configure()
         return cell
     }
 
@@ -65,10 +66,10 @@ class myPlanViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
         if(tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark){
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
-            flag[indexPath.row]=0
+            localData.
         }else{
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
             flag[indexPath.row]=1
@@ -77,6 +78,9 @@ class myPlanViewController: UITableViewController
         tableView.deselectRow(at: indexPath, animated: true)
         
         }
+    
+
+    
     
     
         func openMongoDBRealm() {
@@ -114,46 +118,25 @@ class myPlanViewController: UITableViewController
             }
         }
             
+    ta
             func onRealmOpened(_ realm: Realm){
-                let trainers=realm.objects(Trainer.self)// get user data
-                let t = trainers.where {
-                    $0.userEmail == Auth.auth().currentUser?.email
-                }
+                /*
+                 If cell has checkmark
+                 UPDATE data in realm
+                 */
+                var i=0
                 
+                if((trainerData.TrainPlan?.exercises.isEmpty) != nil){
                 try! realm.write{
-                    if(flag[0]==1){
-                        trainerData.TrainPlan?.exercises[0].weight="3"
-                        trainerData.TrainPlan?.exercises[0].reps="3"
-                        trainerData.TrainPlan?.exercises[0].sets="3"
-                    }
-                    if(flag[1]==1){
-                        trainerData.TrainPlan?.exercises[1].weight="3"
-                        trainerData.TrainPlan?.exercises[1].reps="3"
-                        trainerData.TrainPlan?.exercises[1].sets="3"
-                    }
-                    if(flag[2]==1){
-                        trainerData.TrainPlan?.exercises[2].weight="3"
-                        trainerData.TrainPlan?.exercises[2].reps="3"
-                        trainerData.TrainPlan?.exercises[2].sets="3"
-                    }
-                    if(flag[3]==1){
-                        trainerData.TrainPlan?.exercises[3].weight="3"
-                        trainerData.TrainPlan?.exercises[3].reps="3"
-                        trainerData.TrainPlan?.exercises[3].sets="3"
-                    }
-                    if(flag[4]==1){
-                        trainerData.TrainPlan?.exercises[4].weight="3"
-                        trainerData.TrainPlan?.exercises[4].reps="3"
-                        trainerData.TrainPlan?.exercises[4].sets="3"
-                    }
-                    if(flag[5]==1){
-                        
-                        trainerData.TrainPlan?.exercises[5].weight="3"
-                        trainerData.TrainPlan?.exercises[5].reps="3"
-                        trainerData.TrainPlan?.exercises[5].sets="3"
+                    while (i<trainerData.TrainPlan?.exercises.count! ?? 1) {
+                        trainerData.TrainPlan?.exercises[i].weight = cell.e_weightTextField.text ?? "10"
+                        trainerData.TrainPlan?.exercises[i].reps = cell.e_repsTextField.text ?? "12"
+                            trainerData.TrainPlan?.exercises[i].sets = cell.e_setsTextField.text ?? "3"
+                            trainerData.TrainPlan?.exercises[i].restBetweenSets = Int(cell.e_restTextField.text ?? "60")
+                            
+                        }
                     }
                 }
-                print(t)
                 print(trainerData)
             }
 
