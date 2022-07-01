@@ -48,6 +48,12 @@ class myPlanViewController: UITableViewController
         cell.e_repsTextField.text = item?.reps
         cell.e_weightTextField.text = item?.weight
         cell.e_setsTextField.text = item?.sets
+        cell.e_type.text = item?.type
+        var temp=String(item?.restBetweenSets ?? 0)
+        if(temp == "0"){
+            temp=""
+        }
+        cell.e_restTextField.text = temp
         if(cell.e_restTextField.text != ""){
             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         }else{
@@ -58,13 +64,13 @@ class myPlanViewController: UITableViewController
 
     
     @IBAction func PlanToMain(_ sender: Any) {
-        self.performSegue(withIdentifier: K.PlanToMain, sender: self)
+        self.performSegue(withIdentifier: K.planToTrain, sender: self)
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
         
-        if segue.identifier == K.PlanToMain{
-                    let trainingVC = segue.destination as! mainMenuViewController
+        if segue.identifier == K.planToTrain{
+            let trainingVC = segue.destination as! trainViewController
             openMongoDBRealm()
             trainingVC.trainerData = self.trainerData
                 }
@@ -141,27 +147,22 @@ class myPlanViewController: UITableViewController
                  If cell has checkmark
                  UPDATE data in realm
                  */
-                var i=0
-                let trainers=realm.objects(Trainer.self)// get user data
-                let t = trainers.where {
-                    $0.userEmail == Auth.auth().currentUser?.email
-                }
+
                 if (cellsData.isEmpty == false){
                 try! realm.write{
-                    for e in  t
+                    for i in 0..<(trainerData.TrainPlan?.exercises.count ?? 0)
                     {
                         if(cellsData[i]?.isChecked == true){
-                            e.TrainPlan?.exercises[i].weight = cellsData[i]?.c_weight ?? ""
-                            e.TrainPlan?.exercises[i].reps = cellsData[i]?.c_reps ?? ""
-                            e.TrainPlan?.exercises[i].sets = cellsData[i]?.c_sets  ?? ""
-                            e.TrainPlan?.exercises[i].restBetweenSets = cellsData[i]?.c_rest ?? nil
+                            trainerData.TrainPlan?.exercises[i].weight = cellsData[i]?.c_weight ?? ""
+                            trainerData.TrainPlan?.exercises[i].reps = cellsData[i]?.c_reps ?? ""
+                            trainerData.TrainPlan?.exercises[i].sets = cellsData[i]?.c_sets  ?? ""
+                            trainerData.TrainPlan?.exercises[i].restBetweenSets = cellsData[i]?.c_rest ?? nil
                         }else{
-                            e.TrainPlan?.exercises[i].weight = ""
-                            e.TrainPlan?.exercises[i].reps =  ""
-                            e.TrainPlan?.exercises[i].sets = ""
-                            e.TrainPlan?.exercises[i].restBetweenSets =  nil
+                            trainerData.TrainPlan?.exercises[i].weight = ""
+                            trainerData.TrainPlan?.exercises[i].reps =  ""
+                            trainerData.TrainPlan?.exercises[i].sets = ""
+                            trainerData.TrainPlan?.exercises[i].restBetweenSets =  nil
                         }
-                        i+=1
                     }
                 
                 }

@@ -17,6 +17,7 @@ class loginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var spiner: UIActivityIndicatorView!
     let urlExerciseData = K.FStore.urlExerciseData
     var dataExercise = Trainer_TrainPlan()
     var trainerData = Trainer()
@@ -44,6 +45,7 @@ class loginViewController: UIViewController {
             }
             else {
                 self.openMongoDBRealm()
+                self.spiner.startAnimating()
             }
         }
     }

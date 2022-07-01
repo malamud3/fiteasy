@@ -24,14 +24,8 @@ class MessageCell: UITableViewCell, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        main.layer.shadowColor = UIColor.gray.cgColor
-        main.layer.shadowOffset = CGSize(width: 9.0, height: 8.0)
-        main.layer.shadowOpacity = 1.0
-        main.layer.masksToBounds = true
-        main.layer.cornerRadius = 9.0
-        main.layer.cornerCurve = CALayerCornerCurve.circular
-        msgBubble.layer.cornerCurve = CALayerCornerCurve.circular
-        msgBubble.layer.cornerRadius = 9.0
+        
+        Utilities.confingView(main)
         
         e_weightTextField.delegate=self
         e_repsTextField.delegate=self

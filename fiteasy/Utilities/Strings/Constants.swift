@@ -26,8 +26,10 @@ struct K{
     static let firstPlan = "firstPlan"
     static let mainToTrain = "mainToTrain"
     static let mainToPlan = "mainToPlan"
-    static let PlanToMain = "PlanToMain"
+    static let planToTrain = "planToTrain"
+    static let endTrain = "endTrain"
 
+    
     
 
     

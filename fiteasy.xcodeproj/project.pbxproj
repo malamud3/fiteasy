@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		3A1831FA892FB2D85B53083B /* Pods_fiteasy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A8F108B93F717D61DBAEDC4 /* Pods_fiteasy.framework */; };
 		A9266CF3284787BC0015F0A1 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266CF2284787BC0015F0A1 /* Utilities.swift */; };
-		A9266D102847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */; };
 		A9266D152847B9A60015F0A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D142847B9A60015F0A1 /* Constants.swift */; };
 		A9266D172847BB080015F0A1 /* myPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9266D162847BB080015F0A1 /* myPlanViewController.swift */; };
 		A92A31F62855DEC7007565B1 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A31F42855DEC7007565B1 /* MessageCell.swift */; };
 		A92A31F72855DEC7007565B1 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92A31F52855DEC7007565B1 /* MessageCell.xib */; };
-		A92A31FF2857269C007565B1 /* welcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A31FD2857269C007565B1 /* welcomeCell.swift */; };
 		A92A3202285751EC007565B1 /* Trainer_TrainPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */; };
 		A92A3204285754F4007565B1 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92A3203285754F4007565B1 /* Trainer.swift */; };
 		A945726E286C9C40009E4D4F /* cellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A945726D286C9C40009E4D4F /* cellData.swift */; };
@@ -34,6 +32,10 @@
 		A96CAA4D28460766006114BE /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4C28460766006114BE /* startViewController.swift */; };
 		A96CAA4F28460791006114BE /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96CAA4E28460791006114BE /* registerViewController.swift */; };
 		A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A96CAA50284635FB006114BE /* GoogleService-Info.plist */; };
+		A99667E2286F321D00E8F60D /* Trainer_TrainPlan_exercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99667E1286F321D00E8F60D /* Trainer_TrainPlan_exercises.swift */; };
+		A99667E5286F61A500E8F60D /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99667E4286F61A500E8F60D /* SoundPlayer.swift */; };
+		A99667E7286F67E400E8F60D /* endRest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A99667E6286F67E400E8F60D /* endRest.mp3 */; };
+		A99667EA286F68D800E8F60D /* endViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99667E8286F68D800E8F60D /* endViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,12 +60,10 @@
 		83A73840ED183E942EC519B0 /* Pods-fiteasy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.release.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.release.xcconfig"; sourceTree = "<group>"; };
 		89C2E22EA1A41D083019EB2D /* Pods-fiteasy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fiteasy.debug.xcconfig"; path = "Target Support Files/Pods-fiteasy/Pods-fiteasy.debug.xcconfig"; sourceTree = "<group>"; };
 		A9266CF2284787BC0015F0A1 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer_TrainPlan_exercises.swift; sourceTree = "<group>"; };
 		A9266D142847B9A60015F0A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A9266D162847BB080015F0A1 /* myPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPlanViewController.swift; sourceTree = "<group>"; };
 		A92A31F42855DEC7007565B1 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		A92A31F52855DEC7007565B1 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
-		A92A31FD2857269C007565B1 /* welcomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeCell.swift; sourceTree = "<group>"; };
 		A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer_TrainPlan.swift; sourceTree = "<group>"; };
 		A92A3203285754F4007565B1 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
 		A945726D286C9C40009E4D4F /* cellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellData.swift; sourceTree = "<group>"; };
@@ -86,6 +86,10 @@
 		A96CAA4C28460766006114BE /* startViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
 		A96CAA4E28460791006114BE /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		A96CAA50284635FB006114BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A99667E1286F321D00E8F60D /* Trainer_TrainPlan_exercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer_TrainPlan_exercises.swift; sourceTree = "<group>"; };
+		A99667E4286F61A500E8F60D /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		A99667E6286F67E400E8F60D /* endRest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endRest.mp3; sourceTree = "<group>"; };
+		A99667E8286F68D800E8F60D /* endViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = endViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 		A9266CF1284787510015F0A1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A99667E3286F609100E8F60D /* sound */,
+				A9266D112847B86F0015F0A1 /* Strings */,
 				A9266CF2284787BC0015F0A1 /* Utilities.swift */,
 			);
 			path = Utilities;
@@ -164,12 +170,10 @@
 		A96CAA162845E0D8006114BE /* fiteasy */ = {
 			isa = PBXGroup;
 			children = (
-				A9EAB8262860816E00229DDF /* DataModel */,
-				A9266D112847B86F0015F0A1 /* Strings */,
 				A9266CF1284787510015F0A1 /* Utilities */,
-				A96CAA492845E126006114BE /* Controller */,
-				A96CAA482845E110006114BE /* View */,
 				A96CAA472845E0F9006114BE /* Model */,
+				A96CAA482845E110006114BE /* View */,
+				A96CAA492845E126006114BE /* Controller */,
 				A96CAA172845E0D8006114BE /* AppDelegate.swift */,
 				A96CAA192845E0D8006114BE /* SceneDelegate.swift */,
 				A96CAA202845E0D9006114BE /* Assets.xcassets */,
@@ -200,7 +204,9 @@
 		A96CAA472845E0F9006114BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9EAB8262860816E00229DDF /* DataModel */,
 				A945726D286C9C40009E4D4F /* cellData.swift */,
+				A99667E4286F61A500E8F60D /* SoundPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,12 +228,20 @@
 				A96CAA4E28460791006114BE /* registerViewController.swift */,
 				A9266D162847BB080015F0A1 /* myPlanViewController.swift */,
 				A92A31F42855DEC7007565B1 /* MessageCell.swift */,
-				A92A31FD2857269C007565B1 /* welcomeCell.swift */,
 				A9671489285B760000F525CF /* newUserViewController.swift */,
 				A95891AF2865C07E00AB3F13 /* mainMenuViewController.swift */,
 				A96104C32868C8A50093DBDC /* trainViewController.swift */,
+				A99667E8286F68D800E8F60D /* endViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		A99667E3286F609100E8F60D /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				A99667E6286F67E400E8F60D /* endRest.mp3 */,
+			);
+			path = sound;
 			sourceTree = "<group>";
 		};
 		A9EAB8262860816E00229DDF /* DataModel */ = {
@@ -235,7 +249,7 @@
 			children = (
 				A92A3203285754F4007565B1 /* Trainer.swift */,
 				A92A3201285751EC007565B1 /* Trainer_TrainPlan.swift */,
-				A9266D0F2847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift */,
+				A99667E1286F321D00E8F60D /* Trainer_TrainPlan_exercises.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -361,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99667E7286F67E400E8F60D /* endRest.mp3 in Resources */,
 				A92A31F72855DEC7007565B1 /* MessageCell.xib in Resources */,
 				A96CAA242845E0D9006114BE /* LaunchScreen.storyboard in Resources */,
 				A96CAA51284635FB006114BE /* GoogleService-Info.plist in Resources */,
@@ -432,9 +447,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A99667E2286F321D00E8F60D /* Trainer_TrainPlan_exercises.swift in Sources */,
 				A92A3204285754F4007565B1 /* Trainer.swift in Sources */,
 				A96104C42868C8A50093DBDC /* trainViewController.swift in Sources */,
 				A945726E286C9C40009E4D4F /* cellData.swift in Sources */,
+				A99667EA286F68D800E8F60D /* endViewController.swift in Sources */,
 				A9266CF3284787BC0015F0A1 /* Utilities.swift in Sources */,
 				A96CAA4B284606BE006114BE /* loginViewController.swift in Sources */,
 				A96CAA4F28460791006114BE /* registerViewController.swift in Sources */,
@@ -442,12 +459,11 @@
 				A96CAA4D28460766006114BE /* startViewController.swift in Sources */,
 				A95891B02865C07E00AB3F13 /* mainMenuViewController.swift in Sources */,
 				A967148A285B760000F525CF /* newUserViewController.swift in Sources */,
-				A9266D102847B70B0015F0A1 /* Trainer_TrainPlan_exercises.swift in Sources */,
 				A96CAA182845E0D8006114BE /* AppDelegate.swift in Sources */,
 				A9266D172847BB080015F0A1 /* myPlanViewController.swift in Sources */,
-				A92A31FF2857269C007565B1 /* welcomeCell.swift in Sources */,
 				A96CAA1A2845E0D8006114BE /* SceneDelegate.swift in Sources */,
 				A9266D152847B9A60015F0A1 /* Constants.swift in Sources */,
+				A99667E5286F61A500E8F60D /* SoundPlayer.swift in Sources */,
 				A92A31F62855DEC7007565B1 /* MessageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

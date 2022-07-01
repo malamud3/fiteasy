@@ -175,7 +175,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="139.5" height="101"/>
                                                                     </imageView>
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="rest in sec" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="1k0-eZ-50S">
-                                                                        <rect key="frame" x="20" y="22" width="95.5" height="28"/>
+                                                                        <rect key="frame" x="0.0" y="22" width="115.5" height="28"/>
                                                                         <color key="tintColor" name="AccentColor"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="10"/>
@@ -190,7 +190,7 @@
                                                                     <constraint firstAttribute="bottom" secondItem="1k0-eZ-50S" secondAttribute="bottom" constant="51" id="EaK-ET-nY4"/>
                                                                     <constraint firstItem="Y7a-ul-qOX" firstAttribute="leading" secondItem="dG3-qT-zMR" secondAttribute="leading" id="GaW-B7-WEm"/>
                                                                     <constraint firstItem="1k0-eZ-50S" firstAttribute="top" secondItem="dG3-qT-zMR" secondAttribute="top" constant="22" id="RnS-PG-jO5"/>
-                                                                    <constraint firstItem="1k0-eZ-50S" firstAttribute="leading" secondItem="dG3-qT-zMR" secondAttribute="leading" constant="20" symbolic="YES" id="hVj-8k-Cgn"/>
+                                                                    <constraint firstItem="1k0-eZ-50S" firstAttribute="leading" secondItem="dG3-qT-zMR" secondAttribute="leading" id="hVj-8k-Cgn"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>

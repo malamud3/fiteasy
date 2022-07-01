@@ -11,6 +11,4 @@ import RealmSwift
 class Trainer_TrainPlan:EmbeddedObject ,Codable{
     @Persisted var exercises = List<Trainer_TrainPlan_exercises>()
     @Persisted var restbetwExercises:Int? 
-
-
 }
