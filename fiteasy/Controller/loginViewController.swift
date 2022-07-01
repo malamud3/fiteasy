@@ -26,6 +26,7 @@ class loginViewController: UIViewController {
         super.viewDidLoad()
         errorLabel.alpha = 0
         performRequest()
+        spiner.isHidden=true
       
     }
 
@@ -44,6 +45,7 @@ class loginViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
+                self.spiner.isHidden=false
                 self.openMongoDBRealm()
                 self.spiner.startAnimating()
             }

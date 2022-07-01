@@ -7,6 +7,7 @@
 
 import UIKit
 import NIO
+import FirebaseAuth
 class mainMenuViewController: UIViewController {
     
     var trainerData = Trainer()
@@ -14,7 +15,8 @@ class mainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Main Menu"
+        navigationItem.hidesBackButton = true
     }
     
     @IBAction func StartTrain(_ sender: UIButton) {
@@ -37,5 +39,16 @@ class mainMenuViewController: UIViewController {
                     let trainPlanVC = segue.destination as! myPlanViewController
             trainPlanVC.trainerData = self.trainerData
                 }
+    }
+
+    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
     }
 }

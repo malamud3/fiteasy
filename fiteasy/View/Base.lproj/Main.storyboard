@@ -186,7 +186,6 @@
                                                 <connections>
                                                     <action selector="LoginbtnPressed:" destination="33f-Ks-1oL" eventType="touchUpInside" id="WIL-BQ-Jip"/>
                                                     <action selector="registerPressed:" destination="GxW-FQ-Pc1" eventType="touchUpInside" id="hV8-Ax-seH"/>
-                                                    <segue destination="33f-Ks-1oL" kind="show" id="PJC-HH-AFj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -249,6 +248,7 @@
                         <outlet property="emailTextField" destination="f5X-K8-jyw" id="u8a-Kx-TLo"/>
                         <outlet property="errorLabel" destination="vhV-8g-FJo" id="1EW-kl-OjA"/>
                         <outlet property="passwordTextField" destination="hsM-sq-Jv9" id="zDE-jR-5UC"/>
+                        <segue destination="33f-Ks-1oL" kind="show" identifier="regToLog" id="mir-Mf-ThG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gL3-ep-aw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -562,7 +562,13 @@
                             <constraint firstItem="DPf-b8-6x8" firstAttribute="trailing" secondItem="zk4-Tz-OYP" secondAttribute="trailing" constant="20" id="wNp-fI-WZc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bhb-79-rOt"/>
+                    <navigationItem key="navigationItem" id="own-QT-Zmd">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="QqL-ZZ-qCa">
+                            <connections>
+                                <action selector="logOutPressed:" destination="Oex-Fx-tPV" id="ayi-xR-8bq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="pjn-lz-Ccr" kind="show" identifier="mainToTrain" id="pv4-4D-her"/>
                         <segue destination="k0n-Yl-RZL" kind="show" identifier="mainToPlan" id="eUT-eZ-BZK"/>
@@ -808,13 +814,7 @@
                             <outlet property="delegate" destination="k0n-Yl-RZL" id="fVF-2f-Ykq"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="uoM-Ob-psm">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="zAK-jN-tuq">
-                            <connections>
-                                <action selector="logOutPressed:" destination="k0n-Yl-RZL" id="5WQ-kR-pDk"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="uoM-Ob-psm"/>
                     <connections>
                         <segue destination="pjn-lz-Ccr" kind="show" identifier="planToTrain" id="a3x-Y9-Nhv"/>
                     </connections>
@@ -826,8 +826,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eUT-eZ-BZK"/>
-        <segue reference="a3x-Y9-Nhv"/>
-        <segue reference="PJC-HH-AFj"/>
+        <segue reference="pv4-4D-her"/>
+        <segue reference="mir-Mf-ThG"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="App Plan Presentatio" width="500" height="500"/>

@@ -40,6 +40,7 @@ class registerViewController: UIViewController {
                 } else{
                     self.trainerData._id = Auth.auth().currentUser?.uid
                     self.trainerData.userEmail = Auth.auth().currentUser?.email
+                    self.performSegue(withIdentifier: K.regToLog, sender: self)
                 }
 
         }

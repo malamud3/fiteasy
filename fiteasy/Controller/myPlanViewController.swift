@@ -27,7 +27,6 @@ class myPlanViewController: UITableViewController
         super.viewDidLoad()
         tableView.dataSource = self
         title = "Work Plan"
-        navigationItem.hidesBackButton = true
         self.tableView.rowHeight = 204
                 
         tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
@@ -172,15 +171,5 @@ class myPlanViewController: UITableViewController
             }
     
     
-    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-
-        do {
-            try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
-
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-    }
 }
 

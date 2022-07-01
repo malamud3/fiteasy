@@ -28,7 +28,9 @@ struct K{
     static let mainToPlan = "mainToPlan"
     static let planToTrain = "planToTrain"
     static let endTrain = "endTrain"
+    static let regToLog = "regToLog"
 
+    
     
     
 
