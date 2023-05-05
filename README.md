@@ -20,8 +20,8 @@ SwiftUI
 Installation
 To install the app, clone the repository and open it in Xcode. Then build and run the app on your device or simulator.
 
-Contributing
+### Contributing
 Contributions to the app are welcome. If you find a bug or want to suggest an enhancement, please create an issue on the GitHub repository. If you want to contribute code, please fork the repository and create a pull request.
 
-License
+### License
 This app is licensed under the MIT License. See the LICENSE file for more information.
