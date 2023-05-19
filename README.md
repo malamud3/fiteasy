@@ -13,11 +13,11 @@ Log out
 
 ### The app uses the following dependencies:
 
-NIO
-FirebaseAuth
-RealmSwift
-SwiftUI
-Installation
+#### NIO
+#### FirebaseAuth
+#### RealmSwift
+
+### Installation
 To install the app, clone the repository and open it in Xcode. Then build and run the app on your device or simulator.
 
 ### Contributing
