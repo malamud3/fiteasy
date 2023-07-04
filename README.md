@@ -1,7 +1,7 @@
 ## Fiteasy
 
 ### Introduction
-The Fiteasy app is a fitness app that follows the Model-View-Controller (MVC) architectural pattern. It allows you to create, edit, and follow a workout plan, helping you stay fit and achieve your fitness goals.
+Fiteasy provides a solution for users to easily track and remember their training progress and weights. It eliminates the need to memorize workout details by storing them within the app. Additionally, the app allows users to execute their workout plans in the gym, providing them with a clear understanding of the exercises and the order in which they should be performed.
 
 ![Animated GIF](Demo.gif)
 
