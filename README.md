@@ -3,7 +3,8 @@
 ### Introduction
 Fiteasy provides a solution for users to easily track and remember their training progress and weights. It eliminates the need to memorize workout details by storing them within the app. Additionally, the app allows users to execute their workout plans in the gym, providing them with a clear understanding of the exercises and the order in which they should be performed.
 
-![Animated GIF](Demo.gif)
+<img src="Demo.gif" alt="Animated GIF" width="100px">
+
 
 ### Features
 The app has the following features:
